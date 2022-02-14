@@ -1,0 +1,62 @@
+#burger {
+  position: absolute;
+  left: -9999999px;
+  visibility: hidden;
+}
+#burger:checked + label::before {
+  transform: rotate(45deg);
+  top: 10px;
+  transition: 0.3s ease-in;
+}
+#burger:checked + label::after {
+  transform: rotate(-45deg);
+  bottom: 10px;
+  transition: 0.3s ease-in;
+}
+#burger:checked + label span {
+  opacity: 0;
+  visibility: hidden;
+}
+#burger:checked ~ .nav-list {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transform: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  position: fixed;
+  background-color: #615f55b9;
+}
+.burger-menu {
+  left: 5px;
+  top: 5px;
+  width: 30px;
+  height: 25px;
+  border: 1px solid;
+  border-radius: 5px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 50;
+}
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu span {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  height: 3px;
+  background: #000;
+  transition: 0.3s ease-in;
+}
+.burger-menu::before {
+  content: "";
+  top: 5px;
+}
+.burger-menu::after {
+  content: "";
+  bottom: 5px;
+}
+.burger-menu span {
+  content: "";
+  top: 50%;
+  transform: translateY(-44%);
+}

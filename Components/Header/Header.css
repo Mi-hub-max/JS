@@ -1,0 +1,38 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  align-self: center;
+  padding: 0px 20px;
+  align-items: center;
+  position: relative;
+}
+
+.head-container {
+  display: flex;
+}
+
+.main-image {
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+  width: 121px;
+  padding: 20px 0px;
+  box-sizing: border-box;
+}
+.main-image img {
+  height: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+  max-width: 50px;
+}
+.HeaderButtonElement {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  max-width: 50px;
+}
